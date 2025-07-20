@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forked | Where Culinary Art Takes the Stage</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display for headlines, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles to supplement Tailwind */
+        body {
+            /* Sets the base dark theme for the page */
+            background-color: #111827; /* bg-gray-900 */
+            color: #F9FAFB; /* text-gray-100 */
+            font-family: 'Inter', sans-serif;
+        }
+        /* Applying the elegant serif font to all major headlines */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Style for the hero video to ensure it covers the background */
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        /* Primary button style using a vibrant, high-contrast gold/orange accent */
+        .btn-primary {
+            background-color: #F59E0B; /* amber-500 */
+            color: #111827; /* gray-900 */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+        }
+        /* Secondary "ghost" button style */
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #F59E0B; /* amber-500 */
+            color: #F59E0B;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+        .btn-secondary:hover {
+            background-color: #F59E0B;
+            color: #111827;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- 
+      NAVIGATION HEADER
+      Updated to include navigation to the new Leaderboard page.
+    -->
+    <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-sm">
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="index.html" class="text-3xl font-bold text-white">forked</a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-amber-500 font-semibold hover:text-amber-400 transition-colors">Home</a>
+                <a href="leaderboard.html" class="text-gray-300 hover:text-white transition-colors">Leaderboard</a>
+            </div>
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="#final-cta" class="px-5 py-2 text-sm font-bold rounded-lg btn-secondary">Showcase Your Craft</a>
+                <a href="#final-cta" class="px-5 py-2 text-sm font-bold rounded-lg btn-primary">Book a Seat</a>
+            </div>
+             <!-- Mobile Menu (replaces the simple mobile header) -->
+            <div class="lg:hidden">
+                 <a href="leaderboard.html" class="text-gray-300 hover:text-white transition-colors">Leaderboard</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 
+          SECTION 1: HERO
+          Updated copy to focus on artistry and experience over competition.
+        -->
+        <section id="hero" class="relative h-screen flex items-center justify-center text-center overflow-hidden -mt-20"> <!-- Negative margin to pull it up under the transparent nav -->
+            <!-- Video Background -->
+            <video autoplay loop muted playsinline class="hero-video">
+                <!-- Placeholder video representing the high-energy culinary event -->
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-top-shot-of-a-chef-slicing-a-zucchini-44110-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Dark Overlay for Readability -->
+            <div class="absolute inset-0 bg-black/60"></div>
+            
+            <div class="relative z-10 px-4">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight" data-testid="H-01">
+                    Where Culinary Art Takes the Stage
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-200">
+                    Two chefs. One theme. Fifteen seats. An unforgettable night of creative expression, where artistry is the main course.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#final-cta" class="w-full sm:w-auto px-8 py-4 text-lg font-bold rounded-lg btn-primary" data-testid="CTA-01-Primary">
+                        Book Your Seat
+                    </a>
+                    <a href="#final-cta" class="w-full sm:w-auto px-8 py-4 text-lg font-bold rounded-lg btn-secondary" data-testid="CTA-01-Secondary">
+                        Showcase Your Craft
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SECTION 2: THE CONCEPT (HOW IT WORKS)
+          Updated copy to be less about a "battle" and more about a creative process.
+        -->
+        <section id="concept" class="py-20 sm:py-32 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white">The Spark, The Creation, The Experience</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+                    We provide the canvas. The chefs bring the vision. You get to witness the magic.
+                </p>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-amber-500/10 border-2 border-amber-500">
+                            <svg class="h-8 w-8 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.858-9.45l-6.478 3.488m0 0l-6.478-3.488m6.478 3.488V19.5" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-bold text-white">The Theme is Set</h3>
+                        <p class="mt-2 text-base text-gray-400">Two chefs mutually decide on a theme, inspiring two unique culinary interpretations.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-amber-500/10 border-2 border-amber-500">
+                           <svg class="h-8 w-8 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.362-1.44m0 0c-3.037.02-5.473 2.472-5.473 5.516s2.436 5.496 5.473 5.516m0 0a8.287 8.287 0 005.962-2.585M15.362 5.214a8.287 8.287 0 015.962 2.585m0 0A8.252 8.252 0 0121 12a8.25 8.25 0 01-5.038 7.492M6.038 7.048a8.252 8.252 0 00-5.038 7.492A8.25 8.25 0 009 18.375a8.983 8.983 0 01-3.362-1.44m0 0c3.037.02 5.473-2.472 5.473-5.516s-2.436-5.496-5.473-5.516" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-bold text-white">The Chefs Create</h3>
+                        <p class="mt-2 text-base text-gray-400">Watch as each chef composes a 2 course meal menus, showcasing their unique style and passion.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-amber-500/10 border-2 border-amber-500">
+                            <svg class="h-8 w-8 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-bold text-white">The Diners Experience</h3>
+                        <p class="mt-2 text-base text-gray-400">You come in blind without knowing the menue, taste every dish, and give (very) pretentious reviews. After the event, you decide who won and who goes on the leaderboard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SECTION 3: THE EXPERIENCE (FOR DINERS)
+          Updated copy to directly address the "What's new? and What's good?" diner questions.
+        -->
+        <section id="experience" class="py-20 sm:py-32 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white">The Answer to "What's New & What's Good?"</h2>
+                    <p class="mt-6 text-lg text-gray-300">
+                        That weekend dilemma is over. You want to try something exciting and new, but you also want to be sure it's going to be great. 
+                        <br><br>
+                        At Forked, it's <strong>always new</strong>—every event features a different theme or different chefs. And it's <strong>always good</strong>—because our chefs have complete freedom to cook what they love, pouring their passion and best ideas directly onto your plate. It's the perfect recipe for an unforgettable night out.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#final-cta" class="inline-block px-8 py-3 text-lg font-bold rounded-lg btn-primary">
+                            Reserve Your Place at the Table
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/F9FAFB?text=Delighted+Diners';"
+                         alt="A beautifully plated dish being served to happy diners in an intimate setting." 
+                         class="rounded-2xl shadow-2xl w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SECTION 4: THE PLATFORM (FOR CHEFS)
+          Updated copy to emphasize creative freedom and honing craft over competition.
+        -->
+        <section id="platform" class="py-20 sm:py-32 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                     <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=1887&auto=format&fit=crop" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/F9FAFB?text=Focused+Chef';"
+                         alt="A chef intensely focused on plating a dish with precision." 
+                         class="rounded-2xl shadow-2xl w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white">Your Stage for Culinary Exploration</h2>
+                    <p class="mt-6 text-lg text-gray-300">
+                        This isn't a contest. It's a canvas. Forked is a platform for talented chefs to experiment, innovate, and share their craft without the constraints of a traditional restaurant. 
+                        <br><br>
+                        Bring your boldest ideas. Test that new technique. Cook with your heart for a small, appreciative audience that is there to celebrate your artistry. This is your kitchen, your menu, your story.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#final-cta" class="inline-block px-8 py-3 text-lg font-bold rounded-lg btn-secondary">
+                            Showcase Your Talent
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SECTION 5: SOCIAL PROOF
+          Updated testimonials to match the new, less competitive messaging.
+        -->
+        <section id="social-proof" class="py-20 sm:py-32 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white">From The Kitchen & The Table</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">Don't just take our word for it. Here's what our participants have to say.</p>
+                </div>
+
+                <!-- Video Sizzle Reel Placeholder -->
+                <div class="mt-16 max-w-4xl mx-auto">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-800 rounded-2xl flex items-center justify-center shadow-2xl">
+                       <button type="button" class="inline-flex items-center gap-x-2 rounded-full bg-amber-500 px-6 py-4 text-sm font-semibold text-gray-900 shadow-sm hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500">
+                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653z" /></svg>
+                            <span>Watch The Highlights</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dual Testimonials -->
+                <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Chef Testimonial -->
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <img class="h-16 w-16 rounded-full mx-auto" src="https://media.licdn.com/dms/image/v2/D4D03AQGJDht6jbCDaw/profile-displayphoto-shrink_200_200/B4DZbEZlqMG0AY-/0/1747051765330?e=2147483647&v=beta&t=iGce4zOCxGq3nv0GeEf9y9OEWg9oAbzhWAlovXbdSAg" onerror="this.onerror=null;this.src='https://placehold.co/64x64/1F2937/F9FAFB?text=Chef';" alt="Headshot of Chef Marco">
+                        <blockquote class="mt-6 text-gray-300">
+                            <p>"The idea of creative freedom at Forked is so good. The idea to truly push your boundaries, better your craft and also and connect with people who love food as much as you do. Wow. Also Kartik youre so cool."</p>
+                        </blockquote>
+                        <figcaption class="mt-6">
+                            <div class="font-semibold text-white">Chef Urvi Majithia</div>
+                            <div class="text-gray-400">Kartik's Friend</div>
+                        </figcaption>
+                    </div>
+                    <!-- Diner Testimonial -->
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <img class="h-16 w-16 rounded-full mx-auto" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/64x64/1F2937/F9FAFB?text=Diner';" alt="Headshot of Sarah">
+                        <blockquote class="mt-6 text-gray-300">
+                            <p>"What a great concept. I'm speechless."</p>
+                        </blockquote>
+                        <figcaption class="mt-6">
+                            <div class="font-semibold text-white">Kartik</div>
+                            <div class="text-gray-400">Food enthusiast</div>
+                        </figcaption>
+                    </div>
+                </div>
+                
+                <!-- Credibility Bar: As Seen In -->
+                <!--
+                <div class="mt-20 text-center" data-testid="SP-01">
+                    <h3 class="text-lg font-semibold text-gray-400">AS SEEN IN</h3>
+                    <div class="mt-8 flex justify-center items-center gap-x-8 sm:gap-x-12 grayscale opacity-60">
+                        <p class="text-2xl font-bold">Gourmet Gazette</p>
+                        <p class="text-2xl font-bold">Epicurean Times</p>
+                        <p class="text-2xl font-bold">Foodie Weekly</p>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- 
+          SECTION 6: UPCOMING EVENTS
+          Mocked chef data removed and replaced with a more general, anticipatory message.
+        -->
+        <section id="upcoming-events" class="py-20 sm:py-32 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white">Our Next Experience</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">A new theme is being crafted. Two new artists are being invited to the stage. The next chapter is coming soon.</p>
+                </div>
+                
+                <!-- Scarcity Counter -->
+                <div class="mt-16 max-w-md mx-auto bg-gray-900 border-2 border-amber-500 rounded-2xl p-8 text-center shadow-2xl">
+                    <p class="text-2xl font-bold text-white">Only <span class="text-amber-400 text-5xl mx-2">15</span> Seats Are Available Per Night</p>
+                    <p class="mt-2 text-gray-400">Our intimate events sell out quickly. Don't miss your chance.</p>
+                    <a href="#final-cta" class="mt-6 inline-block w-full px-8 py-4 text-lg font-bold rounded-lg btn-primary">
+                        Claim Your Spot Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SECTION 7: FINAL DUAL CALL-TO-ACTION
+          Updated copy to reflect the new messaging.
+        -->
+        <section id="final-cta" class="py-20 sm:py-32 bg-gray-900">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Diner Path -->
+                    <div class="bg-gray-800 p-10 rounded-2xl text-center flex flex-col items-center">
+                        <h3 class="text-3xl font-bold text-white">Will You Be There?</h3>
+                        <p class="mt-3 text-gray-300 flex-grow">Experience a culinary night like no other. Book now before it sells out completely.</p>
+                        <a href="#" class="mt-8 w-full px-8 py-4 text-lg font-bold rounded-lg btn-primary">
+                            Book Your Seat
+                        </a>
+                    </div>
+                    <!-- Chef Path -->
+                    <div class="bg-gray-800 p-10 rounded-2xl text-center flex flex-col items-center">
+                        <h3 class="text-3xl font-bold text-white">Ready to Create?</h3>
+                        <p class="mt-3 text-gray-300 flex-grow">Step up to the stage. Applications are open for chefs who want to share their unique culinary voice.</p>
+                        <a href="#" class="mt-8 w-full px-8 py-4 text-lg font-bold rounded-lg btn-secondary">
+                            Showcase Your Craft
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-12 px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-base text-gray-400">&copy; 2025 Forked Culinary Events. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4 md:mt-0">
+                <!-- <a href="#" class="text-gray-400 hover:text-white">Instagram</a> -->
+                <!-- <a href="#" class="text-gray-400 hover:text-white">Twitter</a> -->
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

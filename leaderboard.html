@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forked | Leaderboard</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display for headlines, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reusing the same styles from the landing page for consistency */
+        body {
+            background-color: #111827; /* bg-gray-900 */
+            color: #F9FAFB; /* text-gray-100 */
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .btn-primary {
+            background-color: #F59E0B; /* amber-500 */
+            color: #111827; /* gray-900 */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #F59E0B; /* amber-500 */
+            color: #F59E0B;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+        .btn-secondary:hover {
+            background-color: #F59E0B;
+            color: #111827;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- 
+      NAVIGATION HEADER
+      A consistent header for navigation across the site.
+    -->
+    <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-sm">
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="index.html" class="text-3xl font-bold text-white">forked</a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                <a href="leaderboard.html" class="text-amber-500 font-semibold hover:text-amber-400 transition-colors">Leaderboard</a>
+            </div>
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="index.html#final-cta" class="px-5 py-2 text-sm font-bold rounded-lg btn-secondary">Apply to Compete</a>
+                <a href="index.html#final-cta" class="px-5 py-2 text-sm font-bold rounded-lg btn-primary">Book a Seat</a>
+            </div>
+            <!-- Mobile Menu Button can be added here if needed -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- 
+          SECTION 1: LEADERBOARD
+          Objective: Display a ranked list of chefs by their number of wins.
+          Data is now removed and a placeholder message is added.
+        -->
+        <section id="leaderboard" class="py-20 sm:py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl lg:text-5xl font-bold text-white">Reigning Champions</h1>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+                        The official rankings. Chefs are forged in the heat of our kitchen. Only the best rise to the top.
+                    </p>
+                </div>
+
+                <div class="mt-16 max-w-4xl mx-auto">
+                    <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-700/50">
+                                <tr>
+                                    <th scope="col" class="p-4 md:p-6 text-sm font-semibold text-gray-300">Rank</th>
+                                    <th scope="col" class="p-4 md:p-6 text-sm font-semibold text-gray-300">Chef</th>
+                                    <th scope="col" class="p-4 md:p-6 text-sm font-semibold text-gray-300 text-center">Wins</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-700">
+                                <!-- Data will be populated here once events conclude -->
+                                <tr>
+                                    <td colspan="3" class="p-8 text-center text-gray-400">
+                                        The competition is just heating up. Rankings will appear here as champions are crowned.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SECTION 2: PAST EVENTS
+          Objective: Showcase the history of events with visuals and text.
+          Data is now removed and a placeholder message is added.
+        -->
+        <section id="past-events" class="py-20 sm:py-24 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white">A Legacy of Battles</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+                        Each event is a unique story. A moment in time where culinary artistry was pushed to its limits.
+                    </p>
+                </div>
+
+                <div class="mt-16 text-center border-2 border-dashed border-gray-700 rounded-2xl p-12">
+                     <p class="text-gray-400">Our legacy is just beginning. Check back soon to see a history of our epic culinary battles.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-12 px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-base text-gray-400">&copy; 2025 Forked Culinary Events. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
